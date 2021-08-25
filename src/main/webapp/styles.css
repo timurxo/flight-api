@@ -1,0 +1,220 @@
+h1 {
+    color: #3C5186;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Cinzel', serif;
+}
+
+h2, h6 {
+    color: #39A2DB;
+    font-family: 'Cinzel', serif;
+}
+
+
+/*
+    DELETED: 
+            #flight-list, 
+*/
+#flight-table{
+    /* background-color: #f0f4f7; */
+    /* background-color: #FFE3E3; */
+    background-color: #B5EAEA;
+}
+
+
+.box {
+    padding: 50px;
+}
+
+th, td {
+    font-family: 'Cinzel', serif;
+}
+
+/* -----------  */
+.submit-button {
+    background-color: rgb(196, 112, 10);
+    border: none;
+}
+
+#addFlightsDiv, #findFlightByFlightNumberDiv, #updateFlightsDiv, #deleteFlightByFlightNumberDiv {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 150px;
+    padding-top: 100px;
+}
+/* #addFlightsDiv {
+    padding-top: 150px;
+} */
+#flight-list {
+    padding-top: 150px;
+}
+
+#findByFN-section {
+    padding-bottom: 250px;
+}
+
+/* #findByFN-section {
+    padding-top: 100px;
+} */
+
+
+/*  ==================== TOP CONTAINER ================= */
+label {
+    font-family: 'STIX Two Text', serif;
+    color: #3C5186;
+    /* font-family: 'Cinzel', serif; */
+}
+
+/* .fnResults {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+} */
+
+.image1 {
+    /* position: relative; */
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+    filter: brightness(50%);
+  }
+
+  .navbar {
+      opacity: 30%;
+  }
+
+  .my-top-container {
+    position: absolute;
+    /* color: #e0dede; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    padding-bottom: 180px;
+  }
+
+  .name-header {
+    color: black;
+    opacity: 0.8;
+    padding-top: 0;
+  }
+
+  #icon-h {
+      padding-bottom: 0px;
+  }
+
+  .navbar-brand {
+    color: #3C5186;
+    text-align: center;
+    /* padding: 50px; */
+    font-family: 'Cinzel', serif;
+  }
+
+  .top-hr {
+      /* margin-top: 160px; */
+      border-width: 5px;
+      border-radius: 10px;
+      color: #39A2DB;
+      font-size: 70px;
+
+      /* margin-left: 20px;
+      margin-right: 20px; */
+  }
+
+  /* -------- Flying plane ------ */
+#my-plane-icon {
+    animation-name: example;
+    animation-duration: 5s;
+    position: relative;
+    /* color: #334756; */
+    color: #DDDDDD;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    /* from-to */
+    0%   {left:-400px; top:0px;}
+
+    25%  {left:-200px; top:-50px;}
+    50%  {left:0px; top:0px;}
+    75%  {left:200px; top:50px;}
+    
+    100%  {left:400px; top:0px;}
+
+
+    /* 0%   {left:0px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:200px;}
+    100% {left:0px; top:0px;} */
+  }
+
+/*  ================================ */
+
+  
+
+/* ================== ACTION BUTTONS =================*/
+.flightAction-buttons {
+    /* border: 5px solid #FFFF00; */
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+  
+  .button-flightAction {
+    /* color: red; */
+    background-color: white;
+    margin: 10px 5px 10px 5px;
+    /* width: 30%; */
+  
+  }
+
+
+
+  /*  */
+
+  hr {
+    margin: 5% auto 5% auto;
+    border-style: none;
+    border-top-style: solid;
+    border-color: rgb(255, 0, 212);
+    border-width: 3px;
+    width: 10%;
+    /* opacity: 0.1; */
+  }
+
+  section {
+      margin-top: 150px;
+      margin-bottom: 150px;
+  }
+
+  #flight-by-fn, #flight-list {
+      /* margin-left: 500px; */
+      margin: auto;
+      
+  }
+
+
+  /* ========================== BOTTOM ======================== */
+.bottom-container {
+    /* background-color: #393e46; */
+    background-color: #B8DFD8;
+    padding: 50px 0 20px;
+  }
+  
+  .copyright {
+    color: #34656D;
+    font-size: 25px;
+    font-family: 'STIX Two Text', serif;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+
+
+
+
+

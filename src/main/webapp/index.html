@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">        
+
+     <!-- JS -->
+      <script src="index.js" charset="utf-8"></script> 
+
+      <!-- FONTS -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">   
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
+    
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+      <!-- AOS Library -->
+      <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+        <!-- SWAL -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        
+        
+
+
+
+    </head>
+
+
+
+    <script >
+       
+    </script>
+
+
+
+<body style="background-color: #EEEEEE;">
+
+    
+
+
+    <!-- ======================= IMAGE AND INFO ========================== -->
+    <div class="top-container">
+        <img class="image1" src="https://media.cntraveler.com/photos/581250f2997d59497dccf8bc/16:9/w_2560%2Cc_limit/GettyImages-185298837.jpg" alt="image">
+
+        <div class="my-top-container" >
+            
+            <div> 
+                <h1 id="icon-h">
+                  <ion-icon name="airplane-outline" class="top-hr" id="my-plane-icon"></ion-icon>    
+                </h1>
+              </div>  
+              
+            <h1 class="name-header" data-aos="fade-right">Flight Data </h1>
+
+
+        </div>
+
+      </div>
+
+    
+
+    <!-- ------------ NAVBAR ------------ -->
+    
+
+      <nav class="navbar fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#flight-list">View All Flights</a>
+        <a class="navbar-brand" href="#addFlightsDiv">Add Flight</a>
+        <a class="navbar-brand" href="#findFlightByFlightNumberDiv">Find flight by flight number</a>
+        <a class="navbar-brand" href="#updateFlightsDiv">update flight</a>
+        <a class="navbar-brand" href="#deleteFlightByFlightNumberDiv">delete flight</a>
+       
+      </nav>
+
+   
+
+
+
+      <!-- <div> 
+        <h1>
+          <ion-icon name="airplane-outline" class="top-hr" id="my-plane-icon"></ion-icon>    
+        </h1>
+      </div> -->
+
+      <hr style="margin-top: 50px;">
+
+    <div class="container-fluid">
+        <!-- <div> <h1> Flight Data  <ion-icon name="airplane-outline"></ion-icon> </h1></div> -->
+        
+        
+        <!----------------------- BUTTONS FOR ACTIONS ------------------------>
+        <!-- <section id="crudButtons-section">
+        <div class="flightAction-buttons">
+
+            
+            <button id="viewAllBtn" type="button" class="btn btn-outline-primary button-flightAction">  
+                <a class="nav-link" href="#flight-list">
+                <ion-icon name="bar-chart-outline" style='font-size:90px'></ion-icon>
+                <div> View All Flights </div> 
+            </a>
+            </button>
+
+            <button id="addFlightBtn" type="button" class="btn btn-outline-primary button-flightAction">  
+                <a class="nav-link" href="#addFlightsDiv">
+                <ion-icon name="duplicate-outline" style='font-size:90px'></ion-icon>
+                <div> Add Flight </div> 
+            </a>    
+            </button>
+
+            <button type="button" class="btn btn-outline-primary button-flightAction">    
+                <a class="nav-link" href="#findFlightByFlightNumberDiv">
+                <ion-icon name="eye-outline" style='font-size:90px'></ion-icon>
+                <div> Find Flight By Flight Number </div> 
+            </a>  
+            </button>
+
+            <button id="updateFlightBtn" type="button" class="btn btn-outline-primary button-flightAction"> 
+                <a class="nav-link" href="#updateFlightsDiv">
+                <ion-icon name="calendar-outline" style='font-size:90px'></ion-icon>  
+                 <div> Update Flight </div> 
+                </a>   
+                </button>
+
+            <button type="button" class="btn btn-outline-primary button-flightAction">
+                <a class="nav-link" href="#deleteFlightByFlightNumberDiv">
+                <ion-icon name="trash-outline" style='font-size:90px'></ion-icon>
+                <div> Delete Flight </div> 
+            </a> 
+            </button>
+            
+        </div>
+
+        </section> -->
+
+      
+        <!-- <div class="plane-gif">
+        <iframe src="https://giphy.com/embed/H7gQR4tY8jzZ6" width="180" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/flying-plane-snoopy-H7gQR4tY8jzZ6"></a></p>
+    </div> -->
+
+    
+    
+
+        <!---------------------- FIND FLIGHT BY FLIGHT NUMBER ------------------>
+        <section id="findByFN-section">
+            <div>
+
+                <div id="findFlightByFlightNumberDiv" class="row">
+                    <div class="col-lg-6">
+                        <h2> Find Flight By Flight Number</h2>
+                        <form id="findByFN" action="#">
+           
+                            <div class="form-group">
+                                <label> Flight Number</label>
+                                <input class="form-control" id="flightNumberToFind" type="text"/> 
+                            </div>
+            
+                            <div class="form-group">
+                                <input class="btn btn-primary submit-button" type="submit" value="Find My Flight"/> 
+                            </div>
+            
+                        </form>
+                    </div>           
+                   
+                </div>
+        
+                <div id="flight-by-fn" class="col-lg-6 wtf">
+                    <table class="table" id="flight-table-by-fn">
+                            
+                            <h6>Found Flight</h6>
+                            <tr class="table-info-by-fn"> <th>From</th>  <th>To</th> <th>Departure</th> <th>Arrival</th> <th>Flight Number</th></tr>
+            
+                    </table>
+                </div>
+        
+        
+                
+                
+                </div>
+        </section>
+
+        <hr>
+        
+        
+
+        <!----------------------------- ADD FLIGHT ------------------------->
+        <!-- from airport, to airport, departure, arrival, flight number -->
+        <section>
+    <div id="addFlightsDiv" class="row">
+        <div class="col-lg-6">
+            <h2> Add Flight </h2>
+            <form id="new-flight" action="#">
+                <div class="form-group">
+                    <label> From Airport</label>
+                    <input class="form-control" id="fromAirport" type="text"/> 
+                </div>
+
+                <div class="form-group">
+                    <label> To Airport</label>
+                    <input class="form-control" id="toAirport" type="text"/> 
+                </div>
+
+                <div class="form-group">
+                    <label> Departure Date</label>
+                    <input class="form-control" id="departure" type="date"/> 
+                </div>
+
+                <div class="form-group">
+                    <label> Arrival Date</label>
+                    <input class="form-control" id="arrival" type="date"/> 
+                </div>
+
+                <div class="form-group">
+                    <label> Flight Number</label>
+                    <input class="form-control" id="flightNumber" type="text"/> 
+                </div>
+
+                <div class="form-group">
+                    <input class="btn btn-primary submit-button" type="submit" value="Add"/> 
+                </div>
+
+            </form>
+        </div>
+
+     
+    </div>
+</section>
+
+    <hr>
+
+
+    <!----------------------------- UPDATE FLIGHT ------------------------->
+        <!-- from airport, to airport, departure, arrival, flight number -->
+        <section>
+        <div id="updateFlightsDiv" class="row">
+            <div class="col-lg-6">
+                <h2> Update Flight </h2>
+                <form id="update-flight" action="#">
+
+                    <div class="form-group">
+                        <label> Enter Your Flight Number</label>
+                        <input class="form-control" id="flightNumberUpdated" type="text"/> 
+                    </div>
+
+                    <h6>Update Your Flight Information</h3>
+
+                    <div class="form-group">
+                        <label> From Airport</label>
+                        <input class="form-control" id="fromAirportUpdated" type="text"/> 
+                    </div>
+    
+                    <div class="form-group">
+                        <label> To Airport</label>
+                        <input class="form-control" id="toAirportUpdated" type="text"/> 
+                    </div>
+    
+                    <div class="form-group">
+                        <label> Departure Date</label>
+                        <input class="form-control" id="departureUpdated" type="date"/> 
+                    </div>
+    
+                    <div class="form-group">
+                        <label> Arrival Date</label>
+                        <input class="form-control" id="arrivalUpdated" type="date"/> 
+                    </div>
+ 
+                    <div class="form-group">
+                        <input class="btn btn-primary update-button" type="submit" value="Update My Flight"/> 
+                    </div>
+    
+                </form>
+            </div>
+    
+         
+        </div>
+    </section>
+
+        <hr>
+
+        <!---------------------- DELETE FLIGHT BY FLIGHT NUMBER ------------------>
+        <section>
+            <div id="deleteFlightByFlightNumberDiv" class="row">
+                <div class="col-lg-6">
+                    <h2> Delete Flight By Flight Number</h2>
+                    <form id="deleteByFN" action="#">
+       
+                        <div class="form-group">
+                            <label> Flight Number</label>
+                            <input class="form-control" id="flightNumberToDelete" type="text"/> 
+                        </div>
+        
+                        <div class="form-group">
+                            <input class="btn btn-primary submit-button" type="submit" value="Delete My Flight"/> 
+                        </div>
+        
+                    </form>
+                </div>           
+               
+            </div>
+        </section>
+            <hr>
+    <!-- ---------------------------- VIEW ALL FLIGHTS --------------------- -->
+    <section>
+    <div id="flight-list" class="col-lg-6 wtf">
+        <table class="table" id="flight-table">
+                <!-- On rows -->
+                <h2>View all flights</h2>
+
+                <tr class="table-info" > <th>From</th>  <th>To</th> <th>Departure</th> <th>Arrival</th> <th>Flight Number</th></tr>
+
+                <!-- <tr><td>ABC</td> <td> CBA</td>  <td>2022-01-01</td> <td>2022-02-02</td> <td>123AF</td></tr> -->
+
+        </table>
+    </div>
+</section>
+
+  <div class="bottom-container">
+    
+    <p class="copyright">© 2021 by Timur</p>
+  </div>
+ 
+
+
+
+    </div>
+
+    <!-- ICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   
+</body>
+</html>
